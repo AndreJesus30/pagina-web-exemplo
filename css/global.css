@@ -1,0 +1,39 @@
+body {
+  font-family: Arial;
+  margin: 0px;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0pc;
+  list-style: none;
+}
+
+img {
+  max-width: 100%; /*tamanho da imagem é definido no html para um melhor carregamento, porém é respeitado o definido aqui*/
+  height: auto; /*se não colocar como height auto, ele fica fixo no height definido no html*/
+  display: block;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1; /* seria 1 * 8rem */
+  word-break: break-all; /*para quebrar a palavra*/
+  max-width: 4ch; /* 4 caracteres, quando a tela tiver esticada*/
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize; /*aumenta só a primeira letra da palavra*/
+    max-width: initial !important; /*sobrepõe a definição de max-width do arquivo formacao.css*/
+  }
+}
